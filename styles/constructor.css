@@ -5,7 +5,7 @@ body {
 }
 
 main {
-    padding: 20px;
+    padding: 1.25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,11 +14,11 @@ main {
 .title-constructor {
     width: 100%;
     text-align: center;
-    margin: 20px;
+    margin: 1.25rem;
     background-color: rgba(255,255,255,0.5);
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 3.125rem;
+    border-top-right-radius: 3.125rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
 }
 
 .ingredients {
@@ -26,21 +26,22 @@ main {
     display: flex;
     flex-wrap: wrap;
     background-color: rgba(255,255,255,0.5);
-    margin: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 1.25rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
 }
 
 .ingredient {
-    flex-basis: calc(50% - 1em); 
+    flex-basis: calc(50% - 1em);
     box-sizing: border-box;
     padding: 1em;
+    transition: flex-basis 0.5s ease;
 }
 
 h3 {
     text-align: center;
-    padding-top: 20px;
+    padding-top: 1.25rem;
     color: #333;
-    font-size: 24px;
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -49,29 +50,29 @@ h3 {
     justify-content: space-between;
     display: flex;
     align-items: center;
-    margin: 10px 20px;
-    border-radius: 5px;
+    margin: 0.625rem 1.25rem;
+    border-radius: 0.3125rem;
     position: relative;
 }
 
 .ingredient-item span {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-style: italic;
-    margin-top: -2px;
+    margin-top: -0.125rem;
 }
 
 .ingredient-item img {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
+    width: 5rem;
+    height: 5rem;
+    margin-right: 0.625rem;
     cursor: pointer;
 }
 
 .ingredient-item select {
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 100px;
-    font-size: 18px;
+    padding: 0.3125rem;
+    border: 0.0625rem solid #ddd;
+    border-radius: 1000px;
+    font-size: 1.125rem;
     transition: transform 0.2s;
     cursor: pointer;
     background-color: rgba(255,255,255,0.5);
@@ -84,15 +85,14 @@ h3 {
 .ingredient-item button {
     background-color: #008000;
     color: #fff;
-    margin-left: 575px;
-    width: 100px;
-    height: 50px;
+    margin-left: 36rem;
+    width: 6.25rem;
+    height: 3.125rem;
     border: none;
     border-radius: 1000px;
     cursor: pointer;
-    font-size: 40px;
-    transition: background-color 0.2s;
-    transition: transform 0.2s;
+    font-size: 2.5rem;
+    transition: background-color 0.2s, transform 0.2s;
     position: absolute;
 }
 
@@ -103,7 +103,7 @@ h3 {
 
 .ingredient-item button.delete-button {
     background-color: #ff0000;
-    margin-left: 450px;
+    margin-left: 28rem;
 }
 
 .ingredient-item button.delete-button:hover {
@@ -114,55 +114,44 @@ h3 {
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
-    padding-bottom: 20px;
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
+    margin-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    border-bottom-left-radius: 3.125rem;
+    border-bottom-right-radius: 3.125rem;
     background-color: rgba(255,255,255,0.5);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    margin-top: 10px;
+    margin-top: 0.625rem;
     align-self: center;
     color: #333;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
-#order-info {
-    font-size: 18px;
+#order-info, #basket-info, #total-price {
+    font-size: 1.125rem;
 }
 
 .order-data {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 0 20px;
-    gap: 20px;
-}
-
-#basket-info {
-    margin-left: 20px;
-    font-size: 18px;
-}
-
-#total-price {
-    font-weight: bold;
-    font-size: 18px;
+    margin: 0 1.25rem;
+    gap: 1.25rem;
 }
 
 #order-button {
     align-self: center;
     background-color: #ff7f00;
     color: #fff;
-    padding: 15px 20px;
+    padding: 0.9375rem 1.25rem;
     border: none;
     border-radius: 1000px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.125rem;
     width: 12%;
-    transition: background-color 0.2s;
-    transition: transform 0.2s;
+    transition: background-color 0.2s, transform 0.2s;
 }
 
 #order-button:hover {
@@ -177,4 +166,11 @@ h2 {
     transform: translate(-50%, -50%);
     z-index: 999;
     text-align: center;
+}
+
+
+@media screen and (max-width: 50%) {
+    .ingredient {
+        flex-basis: 100%;
+    }
 }

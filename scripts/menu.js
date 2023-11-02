@@ -33,10 +33,10 @@ const menuItemsData = {
 
 const menuIngredients = {
     order1: {lavash: "Classic", meat: "Chicken", sauce: ["Garlic"], veggies: ["Carrots", "Cucumbers"], extra: ["Sausages"]},
-    order2: {lavash: "Sesame", meat: "Chicken", sauce: ["Tomato"], veggies: ["Cucumber"], spices: ["Paprika", "Basil"]},
+    order2: {lavash: "Sesame", meat: "Chicken", sauce: ["Tomato"], veggies: ["Cucumbers"], spices: ["Paprika", "Basil"]},
     order3: {lavash: "Classic", meat: "Lamb", sauce: ["Garlic"], veggies: ["Cabbage"], spices: ["Pepper"]},
     order4: {lavash: "Sesame", meat: "Veal", sauce: ["Tomato"], veggies: ["Cabbage", "Carrots"], spices: ["Pepper"]},
-    order5: {lavash: "Classic", meat: "Chicken", sauce: ["Cheese"], veggies: ["Cabbage", "Cucumber"]}
+    order5: {lavash: "Classic", meat: "Chicken", sauce: ["Cheese"], veggies: ["Cabbage", "Cucumbers"]}
 };
 
 function calculateOrderPrice(variation, selectedPortion) {
